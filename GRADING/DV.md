@@ -2,7 +2,7 @@
 
 ## 0) Мета
 
-- **Проект (опционально BYO):** [«учебный шаблон» (secdev-seed-s06-s08)](https://github.com/TVI-ARTEM/secdev-06-08)
+- **Проект (опционально BYO):** [«учебный шаблон» (secdev-seed-s06-s08)](https://github.com/olegdayo/secdev-devops)
 - **Версия (commit/date):** `v1` / `2025-10-20`
 - **Кратко (1-2 предложения):** тестируем: SQLi, XSS, rate-limit, заголовки безопасности и работу env-конфига, публикуем: образ приложения
 - **Группа:** Беловицкий Владислав, Жулин Артем, Кочнев Виктор, Сергеев Илья, Сидоренков Олег
@@ -39,12 +39,12 @@
   ```
 
 - **Локальный запуск:**
-  - Для локального запуска достаточно вызвать команду `make compose`, которая запустит docker-образ версии указанной в [docker-compose.yml](https://github.com/TVI-ARTEM/secdev-06-08/blob/main/docker-compose.yml) - в данном случае версия с хэшом коммита b5cca0aaf8f8b4e6a4126221955ead5d05d4cae2
+  - Для локального запуска достаточно вызвать команду `make compose`, которая запустит docker-образ версии указанной в [docker-compose.yml](https://github.com/olegdayo/secdev-devops/blob/main/docker-compose.yml) - в данном случае версия с хэшом коммита b5cca0aaf8f8b4e6a4126221955ead5d05d4cae2
 
 EVIDENCE: 
-  - [requirements](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S06/requirements.txt)
-  - [docker-compose.yml](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/docker-compose.yml)
-  - [Makefile](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S06/Makefile)
+  - [requirements](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S06/requirements.txt)
+  - [docker-compose.yml](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/docker-compose.yml)
+  - [Makefile](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S06/Makefile)
 
 ---
 
@@ -64,18 +64,18 @@ EVIDENCE:
 - **docker-compose:** запускает образ `tvi02/secdev-app` версии `latest` (в текущей версии docker-compose), собранной при выполнение ci/cd.
 
 EVIDENCE:
-  - [CI/CD Запуски](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/ci-run.txt)
-  - [docker-compose.yml](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/docker-compose.yml)
-  - [Dockefile](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/Dockerfile)
-  - [build.log](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/build.log)
-  - [compose-up.log](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/compose-up.log)
-  - [health.json](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/health.json)
-  - [http_root_code.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/edit/main/GRADING/DV.md)
-  - [image-size.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/image-size.txt)
-  - [inspect_web.json](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/inspect_web.json)
-  - [non-root.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/edit/main/GRADING/DV.md)
-  - [run.log](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/run.log)
-  - [CD](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/cd.yml)
+  - [CI/CD Запуски](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/ci-run.txt)
+  - [docker-compose.yml](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/docker-compose.yml)
+  - [Dockefile](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/Dockerfile)
+  - [build.log](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/build.log)
+  - [compose-up.log](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/compose-up.log)
+  - [health.json](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/health.json)
+  - [http_root_code.txt](https://github.com/olegdayo/secdev/edit/main/GRADING/DV.md)
+  - [image-size.txt](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/image-size.txt)
+  - [inspect_web.json](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/inspect_web.json)
+  - [non-root.txt](https://github.com/olegdayo/secdev/edit/main/GRADING/DV.md)
+  - [run.log](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/run.log)
+  - [CD](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/cd.yml)
 
 ---
 
@@ -134,14 +134,14 @@ EVIDENCE:
           if-no-files-found: warn
   ```
 
-- **Стабильность:** последние 14 запусков зеленые ([link](https://github.com/TVI-ARTEM/secdev-06-08/actions))
+- **Стабильность:** последние 12 запусков зеленые ([link](https://github.com/olegdayo/secdev-devops/actions))
 - **CD:** кроме CI был добавлен CD Для сборки свежего образа, создаются два тега - один с новым id, другой обновляет `latest` тег, что позволяет запускать `docker-compose` на свежем релизе.
-- **Ссылка/копия лога прогона:** `EVIDENCE/S08/ci-run.txt` ([link](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/ci-run.txt))
+- **Ссылка/копия лога прогона:** `EVIDENCE/S08/ci-run.txt` ([link](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/ci-run.txt))
 
 EVIDENCE:
-  - [CI/CD Запуски](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/ci-run.txt)
-  - [CI](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/ci.yml)
-  - [CD](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/cd.yml)
+  - [CI/CD Запуски](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/ci-run.txt)
+  - [CI](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/ci.yml)
+  - [CD](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/cd.yml)
 
 
 ---
@@ -151,22 +151,22 @@ EVIDENCE:
 
 | Артефакт/лог                    | Путь в `EVIDENCE/`            | Комментарий                                  |
 |---------------------------------|-------------------------------|----------------------------------------------|
-| Лог успешной сборки/тестов и сборки образа (CI/CD) | [S08/ci-run.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/ci-run.txt)     | Ссылки на успешные выполнения CI/CD запусков                       |
-| Локальный лог сборки     | [S06/ci-so6-test.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S06/ci-so6-test.txt)  | Локальный запуск тестов и сборки перед загрузкой в CI                                  |
-| Результаты запуска тестов      | [S08/test-report.xml](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/test-report.xml)          |  Отчет в формате XML с результатами всех unit-тестов. Можно открыть любым текстовым редактором.        |
-| Версии инструментов      | [S06/requirements.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S06/requirements.txt) | Список используемых Python-пакетов с точными версиями для воспроизводимости сборки.                  |
-| Описание CI | [S08/ci.yml](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/ci.yml)  | Конфигурация GitHub Actions |
-| Описание CD | [S08/cd.yml](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/cd.yml) | Конфигурация деплоя Docker-образа в контейнерный реестр. Содержит шаги сборки и публикации с версией, привязанной к коммиту. |
-| Docker-образ после CD| [S08/cd-docker.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/cd-docker.txt) | Ссылка на docker-образ в hub.docker |
+| Лог успешной сборки/тестов и сборки образа (CI/CD) | [S08/ci-run.txt](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/ci-run.txt)     | Ссылки на успешные выполнения CI/CD запусков                       |
+| Локальный лог сборки     | [S06/ci-so6-test.txt](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S06/ci-so6-test.txt)  | Локальный запуск тестов и сборки перед загрузкой в CI                                  |
+| Результаты запуска тестов      | [S08/test-report.xml](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/test-report.xml)          |  Отчет в формате XML с результатами всех unit-тестов. Можно открыть любым текстовым редактором.        |
+| Версии инструментов      | [S06/requirements.txt](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S06/requirements.txt) | Список используемых Python-пакетов с точными версиями для воспроизводимости сборки.                  |
+| Описание CI | [S08/ci.yml](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/ci.yml)  | Конфигурация GitHub Actions |
+| Описание CD | [S08/cd.yml](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/cd.yml) | Конфигурация деплоя Docker-образа в контейнерный реестр. Содержит шаги сборки и публикации с версией, привязанной к коммиту. |
+| Docker-образ после CD| [S08/cd-docker.txt](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/cd-docker.txt) | Ссылка на docker-образ в hub.docker |
 
 
 ---
 
 ## 5) Секреты и переменные окружения (DV5 - гигиена, без сканеров)
 
-- **Шаблон окружения:** [env.example](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/env.example)
+- **Шаблон окружения:** [env.example](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/env.example)
 - **Хранение и передача в CI:**
-  - проверка наличии секректов проверяется в [pre-commit](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S06/pre-commit-config.yaml#L10)
+  - проверка наличии секректов проверяется в [pre-commit](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S06/pre-commit-config.yaml#L10)
   - секреты лежат в настройках репозитория.
   - в pipeline они **не печатаются** в явном виде.
 - **Пример использования секрета в job CI:**
@@ -210,17 +210,17 @@ EVIDENCE:
   git grep -nE 'AKIA|SECRET|token=|password='
   ```
 
-  Результат: [grep-secrets.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/grep-secrets.txt)
-- **Памятка по ротации:** [SECURITY.md](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S06/SECURITY.md)
+  Результат: [grep-secrets.txt](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/grep-secrets.txt)
+- **Памятка по ротации:** [SECURITY.md](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S06/SECURITY.md)
 
 EVIDENCE:
-  - [grep-secrets.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/grep-secrets.txt)
-  - [Использование секретов в CI](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/ci.yml#L37-L47)
-  - [Использование секретов в CD](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/cd.yml#L37-L39)
-  - [Запуск CI/CD](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/ci-run.txt)
-  - [Памятка по ротоации](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S06/SECURITY.md)
-  - [Наличие Secret'ов](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/repo-secrets.png)
-  - [pre-commit-config.yaml](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S06/pre-commit-config.yaml)
+  - [grep-secrets.txt](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/grep-secrets.txt)
+  - [Использование секретов в CI](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/ci.yml#L37-L47)
+  - [Использование секретов в CD](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/cd.yml#L37-L39)
+  - [Запуск CI/CD](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/ci-run.txt)
+  - [Памятка по ротоации](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S06/SECURITY.md)
+  - [Наличие Secret'ов](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/repo-secrets.png)
+  - [pre-commit-config.yaml](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S06/pre-commit-config.yaml)
 
 ---
 
@@ -228,25 +228,25 @@ EVIDENCE:
 
 | Тип     | Файл в `EVIDENCE/`            | Дата         | Коммит/версия | OS    |
 |---------|--------------------------------|--------------------|---------------|--------------|
-| Makefile  | [S06/Makefile](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S06/Makefile)      | `2025-10-20`                  | `v1`      | - |
-| Тест лог | [S06/logs/pytest.log](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S06/logs/pytest.log)   | `2025-10-20`                  | `v1`      | `wsl` |
-| Requirements | [S06/requirements.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S06/requirements.txt)           | `2025-10-20`                  | `v1`      | - |
-| SECURITY  | [S06/SECURITY.md](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S06/SECURITY.md)  | `2025-10-20`                  | `v1`      | - |
-| pre-commit-config    | [S06/pre-commit-config.yaml](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S06/pre-commit-config.yaml)             | `2025-10-20`                  | `v1`      | - |
-| pre-commit run    | [S06/pre-commit-after-updates.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S06/pre-commit-after-updates.txt)             | `2025-10-20`                  | `v1`      | `wsl` |
-| test-report    | [S06/test-report.xml](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S06/test-report.xml)             | `2025-10-20`                  | `v1`      | `wsl` |
-| Dockerfile   | [S07/Dockerfile](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/Dockerfile)             | `2025-10-20`                  | `v1`      | - |
-| docker-compose   | [S07/docker-compose.yml](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/docker-compose.yml)             | `2025-10-20`                  | `v1`      | - |
-| build   | [S07/build.log](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/build.log)             | `2025-10-20`                  | `v1`      | `wsl` |
-| health   | [S07/health.json](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/health.json)             | `2025-10-20`                  | `v1`      | `wsl` |
-| http_root_code   | [S07/http_root_code.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/http_root_code.txt)             | `2025-10-20`                  | `v1`      | `wsl` |
-| image-size   | [S07/image-size.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/image-size.txt)             | `2025-10-20`                  | `v1`      | `wsl` |
-| inspect_web   | [S07/inspect_web.json](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/inspect_web.json)             | `2025-10-20`                  | `v1`      | `wsl` |
-| non-root   | [S07/non-root.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/non-root.txt)             | `2025-10-20`                  | `v1`      | `wsl` |
-| run   | [S07/run.log](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S07/run.log)             | `2025-10-20`                  | `v1`      | `wsl` |
-| ci/cd-run   | [S08/ci-run.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/ci-run.txt)             | `2025-10-20`                  | `v1`      | `ubuntu` |
-| cd docker image  | [S08/cd-docker.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/cd-docker.txt)             | `2025-10-20`                  | `v1`      | `ubuntu` |
-| grep  | [S08/grep-secrets.txt](https://github.com/TVI-ARTEM/secdev-lite-repo/blob/main/EVIDENCE/S08/grep-secrets.txt)             | `2025-10-20`                  | `v1`      | `windows` |
+| Makefile  | [S06/Makefile](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S06/Makefile)      | `2025-10-20`                  | `v1`      | - |
+| Тест лог | [S06/logs/pytest.log](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S06/logs/pytest.log)   | `2025-10-20`                  | `v1`      | `wsl` |
+| Requirements | [S06/requirements.txt](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S06/requirements.txt)           | `2025-10-20`                  | `v1`      | - |
+| SECURITY  | [S06/SECURITY.md](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S06/SECURITY.md)  | `2025-10-20`                  | `v1`      | - |
+| pre-commit-config    | [S06/pre-commit-config.yaml](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S06/pre-commit-config.yaml)             | `2025-10-20`                  | `v1`      | - |
+| pre-commit run    | [S06/pre-commit-after-updates.txt](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S06/pre-commit-after-updates.txt)             | `2025-10-20`                  | `v1`      | `wsl` |
+| test-report    | [S06/test-report.xml](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S06/test-report.xml)             | `2025-10-20`                  | `v1`      | `wsl` |
+| Dockerfile   | [S07/Dockerfile](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/Dockerfile)             | `2025-10-20`                  | `v1`      | - |
+| docker-compose   | [S07/docker-compose.yml](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/docker-compose.yml)             | `2025-10-20`                  | `v1`      | - |
+| build   | [S07/build.log](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/build.log)             | `2025-10-20`                  | `v1`      | `wsl` |
+| health   | [S07/health.json](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/health.json)             | `2025-10-20`                  | `v1`      | `wsl` |
+| http_root_code   | [S07/http_root_code.txt](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/http_root_code.txt)             | `2025-10-20`                  | `v1`      | `wsl` |
+| image-size   | [S07/image-size.txt](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/image-size.txt)             | `2025-10-20`                  | `v1`      | `wsl` |
+| inspect_web   | [S07/inspect_web.json](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/inspect_web.json)             | `2025-10-20`                  | `v1`      | `wsl` |
+| non-root   | [S07/non-root.txt](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/non-root.txt)             | `2025-10-20`                  | `v1`      | `wsl` |
+| run   | [S07/run.log](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S07/run.log)             | `2025-10-20`                  | `v1`      | `wsl` |
+| ci/cd-run   | [S08/ci-run.txt](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/ci-run.txt)             | `2025-10-20`                  | `v1`      | `ubuntu` |
+| cd docker image  | [S08/cd-docker.txt](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/cd-docker.txt)             | `2025-10-20`                  | `v1`      | `ubuntu` |
+| grep  | [S08/grep-secrets.txt](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/grep-secrets.txt)             | `2025-10-20`                  | `v1`      | `windows` |
 
 ---
 

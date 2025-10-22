@@ -39,7 +39,7 @@
   ```
 
 - **Локальный запуск:**
-  - Для локального запуска достаточно вызвать команду `make compose`, которая запустит docker-образ версии указанной в [docker-compose.yml](https://github.com/olegdayo/secdev-devops/blob/main/docker-compose.yml) - в данном случае версия с хэшом коммита b5cca0aaf8f8b4e6a4126221955ead5d05d4cae2
+  - Для локального запуска достаточно вызвать команду `make compose`, которая запустит docker-образ версии указанной в [docker-compose.yml](https://github.com/olegdayo/secdev-devops/blob/main/docker-compose.yml) - в данном случае версия с хэшом коммита 9db4adc2b903a8f6b9a699e57892140597e7afb9
 
 EVIDENCE: 
   - [requirements](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S06/requirements.txt)
@@ -61,7 +61,7 @@ EVIDENCE:
   - Healthcheck: 200
   - No-Root: 1001
 
-- **docker-compose:** запускает образ `tvi02/secdev-app` версии `latest` (в текущей версии docker-compose), собранной при выполнение ci/cd.
+- **docker-compose:** запускает образ `olegdayo/secdev-app` версии `9db4adc2b903a8f6b9a699e57892140597e7afb9` (в текущей версии docker-compose), собранной при выполнение ci/cd.
 
 EVIDENCE:
   - [CI/CD Запуски](https://github.com/olegdayo/secdev/blob/main/EVIDENCE/S08/ci-run.txt)
